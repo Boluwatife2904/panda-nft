@@ -13,7 +13,15 @@ body {
 }
 
 .heading-3-bold {
-    @include typography(700, 4.8rem, 6.4rem);
+    @include typography(700, 3rem, 3.8rem);
+
+    @media screen and (min-width: 600px) {
+        @include typography(700, 3.9em, 4.2rem);
+    }
+
+    @media screen and (min-width: 992px) {
+        @include typography(700, 4.8rem, 6.4rem);
+    }
 }
 
 .heading-4-bold {
@@ -111,3 +119,4 @@ body {
 .paragraph-regular-label {
     @include typography(400, 1.2rem, 3.2rem);
 }
+

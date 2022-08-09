@@ -12,6 +12,14 @@ textarea {
     resize: none;
 }
 
-button:disabled {
-    cursor: not-allowed;
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
 }
+
