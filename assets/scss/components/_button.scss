@@ -1,0 +1,33 @@
+.button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 1.6rem;
+    // padding: 1.6rem 4rem;
+    width: 100%;
+
+    &--solid-white {
+        background-color: var(--white);
+        color: var(--primary-color);
+    }
+
+    &--solid-blue {
+        color: var(--white);
+        background-color: var(--primary-color);
+    }
+
+    &--outline-blue {
+        color: var(--white);
+        border: 1px solid var(--primary-color);
+    }
+
+    &--padding-large {
+        padding: 1.6rem;
+    }
+
+    &--padding-small {
+        padding: 0.8rem;
+    }
+}
+

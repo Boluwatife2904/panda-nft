@@ -1,5 +1,5 @@
 // ABSTRACT IMPORT
-@use "./abstract/variables" as *;
+@import "abstract/variables";
 @import "abstract/mixins";
 
 // BASE IMPORT
@@ -7,3 +7,8 @@
 @import "base/reset";
 @import "base/typography";
 @import "base/utilities";
+
+// COMPONENTS IMPORT
+@import "components/navigation-link";
+@import "components/button";
+

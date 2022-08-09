@@ -1,4 +1,17 @@
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
 }

@@ -1,16 +1,19 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
     scroll-behavior: smooth;
-	font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: #02050e;
 }
+

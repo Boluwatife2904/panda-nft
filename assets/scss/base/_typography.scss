@@ -3,3 +3,111 @@ body {
     font-weight: 400;
     line-height: 1.5;
 }
+
+.heading-1-bold {
+    @include typography(700, 7.2rem, 9.6rem);
+}
+
+.heading-2-bold {
+    @include typography(700, 6.4rem, 8rem);
+}
+
+.heading-3-bold {
+    @include typography(700, 4.8rem, 6.4rem);
+}
+
+.heading-4-bold {
+    @include typography(700, 3.2rem, 4.8rem);
+}
+
+.heading-5-bold {
+    @include typography(700, 2.4rem, 3.2rem);
+}
+
+.heading-6-bold {
+    @include typography(700, 1.6rem, 2.4rem);
+}
+
+.heading-1-medium {
+    @include typography(500, 7.2rem, 9.6rem);
+}
+
+.heading-2-medium {
+    @include typography(500, 6.4rem, 8rem);
+}
+
+.heading-3-medium {
+    @include typography(500, 4.8rem, 6.4rem);
+}
+
+.heading-4-medium {
+    @include typography(500, 3.2rem, 4.8rem);
+}
+
+.heading-5-medium {
+    @include typography(500, 2.4rem, 3.2rem);
+}
+
+.heading-6-medium {
+    @include typography(500, 1.6rem, 2.4rem);
+}
+
+.heading-1-regular {
+    @include typography(400, 7.2rem, 9.6rem);
+}
+
+.heading-2-regular {
+    @include typography(400, 6.4rem, 8rem);
+}
+
+.heading-3-regular {
+    @include typography(400, 4.8rem, 6.4rem);
+}
+
+.heading-4-regular {
+    @include typography(400, 3.2rem, 4.8rem);
+}
+
+.heading-5-regular {
+    @include typography(400, 2.4rem, 3.2rem);
+}
+
+.heading-6-regular {
+    @include typography(400, 1.6rem, 2.4rem);
+}
+
+.paragraph-bold-body {
+    @include typography(700, 1.6rem, 3.2rem);
+}
+
+.paragraph-bold-caption {
+    @include typography(700, 1.4rem, 2.4rem);
+}
+
+.paragraph-bold-label {
+    @include typography(700, 1.2rem, 3.2rem);
+}
+
+.paragraph-semibold-body {
+    @include typography(600, 1.6rem, 3.2rem);
+}
+
+.paragraph-semibold-caption {
+    @include typography(600, 1.4rem, 2.4rem);
+}
+
+.paragraph-semibold-label {
+    @include typography(600, 1.2rem, 3.2rem);
+}
+
+.paragraph-regular-body {
+    @include typography(400, 1.6rem, 3.2rem);
+}
+
+.paragraph-regular-caption {
+    @include typography(400, 1.4rem, 2.4rem);
+}
+
+.paragraph-regular-label {
+    @include typography(400, 1.2rem, 3.2rem);
+}

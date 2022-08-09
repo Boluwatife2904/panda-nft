@@ -2,7 +2,9 @@
 
 <template>
     <main>
+        <TheNavbar />
         <slot></slot>
+        <TheFooter />
     </main>
 </template>
 

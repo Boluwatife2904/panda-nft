@@ -1,0 +1,36 @@
+.navigation {
+    &__item {
+        margin-bottom: 1.6rem;
+
+        &--navbar {
+            &:not(:last-child) {
+                margin-right: 3.2rem;
+            }
+        }
+    }
+
+    &__link {
+        @include typography(400, 1.6rem, 2.4rem);
+        color: var(--gray-500);
+
+        &--navbar {
+            font-weight: 600;
+        }
+
+        &--active {
+            position: relative;
+            color: var(--gray-100);
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 4rem;
+                height: 0.2rem;
+                background-color: var(--primary-color);
+                left: 0;
+                top: 3.2rem;
+            }
+        }
+    }
+}
+

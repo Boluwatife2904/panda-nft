@@ -1,8 +1,12 @@
 <script lang="ts" setup></script>
 
 <template>
-    <div>Home Page</div>
+    <TheCallToAction />
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.index {
+    margin-bottom: 16rem;
+}
+</style>
 
