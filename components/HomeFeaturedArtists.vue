@@ -73,8 +73,11 @@ const featuredArtists = [
     padding: 0.8rem 0.8rem 2.4rem;
 
     &__cover-image {
+        width: 100%;
         margin: 0 auto;
         max-width: 100%;
+        object-fit: cover;
+        border-radius: 1.6rem;
     }
 
     &__content {
