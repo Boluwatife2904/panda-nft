@@ -4,8 +4,8 @@
     <section class="cta">
         <div class="container">
             <div class="cta__wrapper text-center">
-                <h3 class="heading-3-bold cta__title">Create Your Own NFT!</h3>
-                <p class="paragraph-regular-body cta__paragraph">We have a large scale group to support each other in this game, Join us to get the news as soon as possible and follow our latest announcements!</p>
+                <h3 class="heading-3-bold cta__title text-white">Create Your Own NFT!</h3>
+                <p class="paragraph-regular-body cta__paragraph text-white">We have a large scale group to support each other in this game, Join us to get the news as soon as possible and follow our latest announcements!</p>
                 <BaseButton variant="solid-white" weight="semibold" max-width="258px" padding="large"> Join Community Now</BaseButton>
             </div>
         </div>
@@ -38,12 +38,10 @@
     }
 
     &__title {
-        color: var(--white);
         margin-bottom: 2.4rem;
     }
 
     &__paragraph {
-        color: var(--white);
         margin-bottom: 4rem;
     }
 }

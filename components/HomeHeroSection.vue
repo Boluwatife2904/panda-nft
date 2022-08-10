@@ -7,11 +7,11 @@ import GetStartedIcon from "./icons/GetStartedIcon.vue";
         <section class="main-hero">
             <div class="container grid">
                 <div class="main-hero__left">
-                    <h2 class="heading-2-bold main-hero__heading">Discover a New Era of Crypto Currency</h2>
+                    <h2 class="heading-2-bold main-hero__heading text-white">Discover a New Era of Crypto Currency</h2>
                 </div>
                 <div class="main-hero__right">
                     <p class="main-hero__paragraph paragraph-regular-body">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                    <a href="#" class="main-hero__link paragraph-semibold-body flex items-center"> <span>Get Started</span> <GetStartedIcon /></a>
+                    <a href="#" class="main-hero__link paragraph-semibold-body flex items-center text-white"> <span>Get Started</span> <GetStartedIcon /></a>
                 </div>
             </div>
         </section>
@@ -52,17 +52,12 @@ import GetStartedIcon from "./icons/GetStartedIcon.vue";
         }
     }
 
-    &__heading {
-        color: var(--white);
-    }
-
     &__paragraph {
         color: var(--gray-500);
         margin-bottom: 2.4rem;
     }
 
     &__link {
-        color: var(--white);
         gap: 0.8rem;
 
         span {

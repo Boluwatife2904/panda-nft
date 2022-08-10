@@ -1,6 +1,5 @@
 .button {
     border-radius: 1.6rem;
-    width: 100%;
 
     &--solid-white {
         background-color: var(--white);
@@ -19,10 +18,24 @@
 
     &--padding-large {
         padding: 1.6rem;
+        width: 100%;
     }
 
     &--padding-small {
         padding: 0.8rem;
+        width: 100%;
+    }
+
+    &--view-more {
+        padding: 0.8rem;
+        width: 100%;
+        max-width: 10rem;
+        font-size: 1.2rem;
+
+        @media screen and (min-width: 768px) {
+            max-width: 17.5rem;
+            padding: 1.2rem;
+        }
     }
 }
 

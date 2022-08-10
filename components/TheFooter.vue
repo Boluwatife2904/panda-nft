@@ -13,7 +13,7 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
                     <p class="footer__description paragraph-regular-body">The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.</p>
                 </div>
                 <div class="footer__wrapper">
-                    <h5 class="heading-5-bold footer__heading">Resources</h5>
+                    <h5 class="heading-5-bold footer__heading text-white">Resources</h5>
                     <ul>
                         <li class="navigation__item">
                             <a href="#" class="navigation__link">Help Center</a>
@@ -33,7 +33,7 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
                     </ul>
                 </div>
                 <div class="footer__wrapper">
-                    <h5 class="heading-5-bold footer__heading">Company</h5>
+                    <h5 class="heading-5-bold footer__heading text-white">Company</h5>
                     <ul>
                         <li class="navigation__item">
                             <a href="#" class="navigation__link">Our Team</a>
@@ -50,7 +50,7 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
                     </ul>
                 </div>
                 <div class="footer__wrapper">
-                    <h5 class="heading-5-bold footer__heading">Contact</h5>
+                    <h5 class="heading-5-bold footer__heading text-white">Contact</h5>
                     <p class="footer__contact paragraph-regular-body">2715 Ash Dr. San Jose, South Dakota 83475</p>
                     <ul class="footer__socials grid">
                         <li>
@@ -65,7 +65,7 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
                     </ul>
                 </div>
             </div>
-            <p class="footer__copyright paragraph-regular-caption">&copy; {{ new Date().getFullYear() }} All Right Reserved</p>
+            <p class="footer__copyright paragraph-regular-caption text-white">&copy; {{ new Date().getFullYear() }} All Right Reserved</p>
         </div>
     </footer>
 </template>
@@ -98,12 +98,7 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
     }
 
     &__heading {
-        color: var(--white);
         margin-bottom: 2.4rem;
-    }
-
-    &__copyright {
-        color: var(--white);
     }
 
     &__contact {
