@@ -25,6 +25,7 @@
 <style lang="scss">
 .logos-section {
     padding: 0 2rem;
+    margin-bottom: 14.6rem;
 
     @media screen and (min-width: 768px) {
         padding: 0 3.2rem;

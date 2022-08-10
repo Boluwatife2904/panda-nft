@@ -4,6 +4,7 @@
     <div>
         <HomeHeroSection />
         <HomeCompanyLogos />
+        <HomeCreateSellNFT />
         <TheCallToAction />
     </div>
 </template>
