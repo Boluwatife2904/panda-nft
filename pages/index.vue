@@ -1,7 +1,10 @@
 <script lang="ts" setup></script>
 
 <template>
-    <TheCallToAction />
+    <div>
+        <HomeHeroSection />
+        <TheCallToAction />
+    </div>
 </template>
 
 <style lang="scss" scoped>

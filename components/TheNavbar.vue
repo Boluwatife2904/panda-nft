@@ -33,18 +33,17 @@ const navbarLinks = ref([
             <div class="navbar__logo">
                 <img src="~/assets/images/pandanft-logo.svg" width="140" height="40" alt="Panda NFT Logo" />
             </div>
-            <ul class="navbar__links flex hide-on-mobile">
+            <ul class="navbar__links">
                 <li v-for="{ name, title } in navbarLinks" class="navigation__item--navbar">
                     <nuxt-link :to="{ name }" class="navigation__link navigation__link--navbar" :class="{ 'navigation__link--active': $route.name === name }">{{ title }}</nuxt-link>
                 </li>
             </ul>
-            <div class="navbar__connect hide-on-mobile">
+            <div class="navbar__connect">
                 <BaseButton variant="outline-blue" max-width="100%">Connect Wallet</BaseButton>
             </div>
             <button class="navbar__menu hide-on-desktop">
                 <span class="navbar__menu-bar block"></span>
                 <span class="navbar__menu-bar block"></span>
-                <!-- <span class="navbar__menu-bar block"></span> -->
             </button>
         </div>
     </nav>
