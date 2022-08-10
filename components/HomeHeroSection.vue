@@ -76,7 +76,7 @@ import GetStartedIcon from "./icons/GetStartedIcon.vue";
         scrollbar-width: none;
         overflow-y: scroll;
         max-width: 154.2rem;
-        margin: 6rem auto 0;
+        margin: 6rem auto 12rem;
 
         &::-webkit-scrollbar {
             display: none;

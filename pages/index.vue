@@ -3,6 +3,7 @@
 <template>
     <div>
         <HomeHeroSection />
+        <HomeCompanyLogos />
         <TheCallToAction />
     </div>
 </template>
