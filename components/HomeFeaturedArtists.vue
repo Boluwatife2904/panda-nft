@@ -37,9 +37,9 @@ const featuredArtists = [
             </div>
             <div class="featured-artists__grid grid">
                 <div v-for="artist in featuredArtists" class="featured-artists__grid-item featured-artist">
-                    <img :src="artist.coverImage" :alt="`${artist.name} cover image`" width="266" height="225" class="featured-artist__cover-image mx-auto block" />
+                    <img loading="lazy" :src="artist.coverImage" :alt="`${artist.name} cover image`" width="266" height="225" class="featured-artist__cover-image mx-auto block" />
                     <div class="featured-artist__content text-center text-white">
-                        <img :src="artist.profileImage" height="104" width="104" :alt="`${artist.name} profile image`" class="featured-artist__profile-image mx-auto block" />
+                        <img loading="lazy" :src="artist.profileImage" height="104" width="104" :alt="`${artist.name} profile image`" class="featured-artist__profile-image mx-auto block" />
                         <h5 class="heading-5-bold featured-artist__name">{{ artist.name }}</h5>
                         <h6 class="heading-6-bold featured-artist__followers flex items-center content-center"><EthereumIcon /> {{ artist.followers }}</h6>
                     </div>

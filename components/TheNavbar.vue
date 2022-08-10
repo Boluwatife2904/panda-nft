@@ -31,7 +31,7 @@ const navbarLinks = ref([
     <nav class="navbar">
         <div class="container flex">
             <div class="navbar__logo">
-                <img src="~/assets/images/pandanft-logo.svg" width="140" height="40" alt="Panda NFT Logo" />
+                <img loading="lazy" src="~/assets/images/pandanft-logo.svg" width="140" height="40" alt="Panda NFT Logo" />
             </div>
             <ul class="navbar__links">
                 <li v-for="{ name, title } in navbarLinks" class="navigation__item--navbar">

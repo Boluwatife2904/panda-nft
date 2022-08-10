@@ -4,19 +4,19 @@
     <section class="logos-section">
         <div class="container flex items-center">
             <div class="logos-section__item">
-                <img src="/images/logos/binance.svg" width="139" height="34" alt="Binance Logo" />
+                <img loading="lazy" src="/images/logos/binance.svg" width="139" height="34" alt="Binance Logo" />
             </div>
             <div class="logos-section__item">
-                <img src="/images/logos/trustwallet.svg" width="139" height="34" alt="TrustWallet Logo" />
+                <img loading="lazy" src="/images/logos/trustwallet.svg" width="139" height="34" alt="TrustWallet Logo" />
             </div>
             <div class="logos-section__item">
-                <img src="/images/logos/metamask.svg" width="139" height="34" alt="Metamask Logo" />
+                <img loading="lazy" src="/images/logos/metamask.svg" width="139" height="34" alt="Metamask Logo" />
             </div>
             <div class="logos-section__item">
-                <img src="/images/logos/coinbase.svg" width="139" height="34" alt="Coinbase Logo" />
+                <img loading="lazy" src="/images/logos/coinbase.svg" width="139" height="34" alt="Coinbase Logo" />
             </div>
             <div class="logos-section__item">
-                <img src="/images/logos/tokocrypto.svg" width="139" height="34" alt="Tokocrypto Logo" />
+                <img loading="lazy" src="/images/logos/tokocrypto.svg" width="139" height="34" alt="Tokocrypto Logo" />
             </div>
         </div>
     </section>

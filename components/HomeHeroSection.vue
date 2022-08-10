@@ -17,13 +17,13 @@ import GetStartedIcon from "./icons/GetStartedIcon.vue";
         </section>
         <section class="main-hero__images flex">
             <div class="main-hero__image">
-                <img src="/images/hero-section-image-one.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
+                <img loading="lazy" src="/images/hero-section-image-one.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
             </div>
             <div class="main-hero__image">
-                <img src="/images/hero-section-image-two.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
+                <img loading="lazy" src="/images/hero-section-image-two.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
             </div>
             <div class="main-hero__image">
-                <img src="/images/hero-section-image-three.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
+                <img loading="lazy" src="/images/hero-section-image-three.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
             </div>
         </section>
     </div>
