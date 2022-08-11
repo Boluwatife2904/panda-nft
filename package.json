@@ -18,5 +18,9 @@
         "eslint-plugin-vue": "^9.3.0",
         "nuxt": "3.0.0-rc.6",
         "sass": "^1.54.3"
+    },
+    "dependencies": {
+        "@pinia/nuxt": "^0.4.0",
+        "gsap": "^3.10.4"
     }
 }

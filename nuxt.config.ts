@@ -27,6 +27,10 @@ export default defineNuxtConfig({
             ],
         },
     },
+    build: {
+        transpile: ["gsap"],
+    },
+    buildModules: ["@pinia/nuxt"],
     css: ["~/assets/scss/main.scss"],
 });
 

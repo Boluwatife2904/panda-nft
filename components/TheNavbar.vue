@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { gsap } from "gsap";
+
 const navbarLinks = ref([
     {
         name: "index",
@@ -25,20 +27,33 @@ const navbarLinks = ref([
         title: "Contact Us",
     },
 ]);
+
+const navbar = ref<HTMLElement>(null);
+const navbarLogo = ref<HTMLImageElement>(null);
+const navbarLinkItems = ref<HTMLUListElement>(null);
+const connectWalletButton = ref<HTMLButtonElement>(null);
+
+onMounted(() => {
+    const navbarTimeline = gsap.timeline();
+    navbarTimeline.from(navbar.value, { opacity: 0 });
+    navbarTimeline.from(navbarLogo.value, { y: -50, opacity: 0 });
+    navbarTimeline.from(navbarLinkItems.value.children, { x: 20, opacity: 0, stagger: 0.2 }, "-=0.5");
+    navbarTimeline.from(connectWalletButton.value, { y: 20, opacity: 0 }, "-=0.7");
+});
 </script>
 
 <template>
-    <nav class="navbar">
+    <nav ref="navbar" class="navbar">
         <div class="container flex">
-            <div class="navbar__logo">
+            <div ref="navbarLogo" class="navbar__logo">
                 <img loading="lazy" src="~/assets/images/pandanft-logo.svg" width="140" height="40" alt="Panda NFT Logo" />
             </div>
-            <ul class="navbar__links">
+            <ul ref="navbarLinkItems" class="navbar__links">
                 <li v-for="{ name, title } in navbarLinks" class="navigation__item--navbar">
                     <nuxt-link :to="{ name }" class="navigation__link navigation__link--navbar" :class="{ 'navigation__link--active': $route.name === name }">{{ title }}</nuxt-link>
                 </li>
             </ul>
-            <div class="navbar__connect">
+            <div ref="connectWalletButton" class="navbar__connect">
                 <BaseButton variant="outline-blue" max-width="100%">Connect Wallet</BaseButton>
             </div>
             <button class="navbar__menu hide-on-desktop">

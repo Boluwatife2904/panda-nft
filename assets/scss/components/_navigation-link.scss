@@ -12,9 +12,14 @@
     &__link {
         @include typography(400, 1.6rem, 2.4rem);
         color: var(--gray-500);
+        transition: all .3s;
 
         &--navbar {
             font-weight: 600;
+
+            &:hover {
+                color: var(--gray-100);
+            }
         }
 
         &--active {

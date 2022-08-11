@@ -9,7 +9,7 @@ body {
 }
 
 .heading-2-bold {
-    @include typography(700, 3.8rem, 4.6rem);
+    @include typography(700, 3.6rem, 4.6rem);
 
     @media screen and (min-width: 768px) {
         @include typography(700, 5rem, 6.4rem);
@@ -21,7 +21,7 @@ body {
 }
 
 .heading-3-bold {
-    @include typography(700, 3rem, 3.8rem);
+    @include typography(700, 2.6rem, 3.8rem);
 
     @media screen and (min-width: 600px) {
         @include typography(700, 3.9em, 4.2rem);
