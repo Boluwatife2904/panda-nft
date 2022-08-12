@@ -52,6 +52,7 @@ const featuredArtists = [
 <style lang="scss">
 .featured-artists {
     padding: 0 2rem;
+    margin-bottom: 16rem;
 
     @media screen and (min-width: 768px) {
         padding: 0 3.2rem;

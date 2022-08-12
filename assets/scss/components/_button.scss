@@ -1,5 +1,6 @@
 .button {
-    border-radius: 1.6rem;
+    transition: all 0.5s;
+    border: 1px solid transparent;
 
     &--solid-white {
         background-color: var(--white);
@@ -26,14 +27,24 @@
         width: 100%;
     }
 
+    &--radius-large {
+        border-radius: 1.6rem;
+    }
+
+    &--radius-small {
+        border-radius: 0.8rem;
+    }
+
     &--view-more {
         padding: 0.8rem;
         width: 100%;
         max-width: 10rem;
         font-size: 1.2rem;
+        border-radius: 1.6rem;
 
         @media screen and (min-width: 768px) {
             max-width: 17.5rem;
+            font-size: 1.4rem;
             padding: 1.2rem;
         }
     }

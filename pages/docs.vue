@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div></div>
+    <div>
+        <WebsiteInMaintenance />
+    </div>
 </template>
 
 <style scoped></style>

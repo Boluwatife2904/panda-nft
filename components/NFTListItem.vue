@@ -69,7 +69,7 @@ const convertToCountdown = setInterval(() => {
                 <h6 class="heading-6-bold text-white nft-card__user-name">{{ product.name }}</h6>
                 <div class="flex items-center nft-card__user-details">
                     <img src="/images/users/1.svg" alt="" />
-                    <p class="paragraph-regular-caption text-white">{{ product.username }}i</p>
+                    <p class="paragraph-regular-caption text-white">{{ product.username }}</p>
                 </div>
             </div>
             <div class="nft-card__bid">
@@ -93,7 +93,11 @@ const convertToCountdown = setInterval(() => {
 .nft-card {
     background-color: var(--gray-900);
     border-radius: 1.6rem;
-    padding: 2.4rem;
+    padding: 0.8rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 2.4rem;
+    }
 
     &__image {
         position: relative;

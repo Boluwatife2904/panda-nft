@@ -5,7 +5,7 @@ const ProductStore = useProductStore();
 </script>
 
 <template>
-    <section class="live-auctions">
+    <section class="live-auctions relative">
         <div class="container">
             <div class="live-auctions__heading flex items-center space-between">
                 <h3 class="heading-3-bold live-auctions__title text-white">Live Auctions</h3>
@@ -15,6 +15,7 @@ const ProductStore = useProductStore();
                 <NFTListItem v-for="product in ProductStore.liveAuctions" :key="product.image" :product="product" />
             </NFTList>
         </div>
+        <div class="ornament ornament--auctions"></div>
     </section>
 </template>
 

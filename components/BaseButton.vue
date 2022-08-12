@@ -4,6 +4,7 @@ interface Props {
     weight?: string;
     padding?: string;
     maxWidth?: string;
+    radius?: string;
 }
 
 const props = defineProps<Props>();
@@ -36,10 +37,19 @@ const paddingClasses = computed(() => {
             return "button--padding-small";
     }
 });
+
+const radiusClasses = computed(() => {
+    switch (props.radius) {
+        case "small":
+            return "button--radius-small";
+        default:
+            return "button--radius-large";
+    }
+});
 </script>
 
 <template>
-    <button :class="['button', variantClasses, weightClasses, paddingClasses]">
+    <button :class="['button', variantClasses, weightClasses, paddingClasses, radiusClasses]">
         <slot></slot>
     </button>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <section class="logos-section">
+    <section class="logos-section relative">
         <div class="container flex items-center">
             <div class="logos-section__item">
                 <img loading="lazy" src="/images/logos/binance.svg" width="139" height="34" alt="Binance Logo" />
@@ -19,6 +19,7 @@
                 <img loading="lazy" src="/images/logos/tokocrypto.svg" width="139" height="34" alt="Tokocrypto Logo" />
             </div>
         </div>
+        <div class="ornament ornament--logos"></div>
     </section>
 </template>
 

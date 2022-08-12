@@ -7,6 +7,7 @@
         <HomeCreateSellNFT />
         <HomeLiveAuctions />
         <HomeFeaturedArtists />
+        <HomeHotNFTs />
         <TheCallToAction />
     </div>
 </template>
