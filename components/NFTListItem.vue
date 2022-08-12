@@ -93,7 +93,7 @@ const convertToCountdown = setInterval(() => {
 .nft-card {
     background-color: var(--gray-900);
     border-radius: 1.6rem;
-    padding: 0.8rem;
+    padding: 1.8rem 1.2rem;
 
     @media screen and (min-width: 768px) {
         padding: 2.4rem;
