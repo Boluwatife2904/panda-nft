@@ -12,6 +12,7 @@ interface NFT {
     currentBid: number;
     username: string;
     dueDate: string;
+    user: string;
 }
 
 interface Props {
@@ -19,23 +20,6 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-
-const toggleLikeIcon = () => {
-    gsap.fromTo(
-        likeButton.value,
-        {
-            scale: 0.4,
-        },
-        {
-            ease: "power.out",
-            duration: 0.25,
-            scale: 1,
-            onComplete: function () {
-                isLiked.value = !isLiked.value;
-            },
-        }
-    );
-};
 
 const convertToCountdown = setInterval(() => {
     const todaysDate = new Date();
@@ -56,6 +40,23 @@ const convertToCountdown = setInterval(() => {
         countdown.value = "00 : 00 : 00 : 00";
     }
 }, 1000);
+
+const toggleLikeIcon = () => {
+    gsap.fromTo(
+        likeButton.value,
+        {
+            scale: 0.4,
+        },
+        {
+            ease: "power.out",
+            duration: 0.25,
+            scale: 1,
+            onComplete: function () {
+                isLiked.value = !isLiked.value;
+            },
+        }
+    );
+};
 </script>
 
 <template>
@@ -68,7 +69,7 @@ const convertToCountdown = setInterval(() => {
             <div class="nft-card__user">
                 <h6 class="heading-6-bold text-white nft-card__user-name">{{ product.name }}</h6>
                 <div class="flex items-center nft-card__user-details">
-                    <img src="/images/users/1.svg" alt="" />
+                    <img :src="product.user" :alt="`${product.username} profile image`" class="nft-card__user-image" />
                     <p class="paragraph-regular-caption text-white">{{ product.username }}</p>
                 </div>
             </div>
@@ -135,6 +136,14 @@ const convertToCountdown = setInterval(() => {
 
         &-details {
             gap: 0.8rem;
+        }
+
+        &-image {
+            height: 4rem;
+            width: 4rem;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
         }
     }
 

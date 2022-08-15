@@ -73,6 +73,7 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
 <style lang="scss">
 .footer {
     padding: 8.8rem 2rem 6.4rem;
+    margin-top: 6.8rem;
 
     @media screen and (min-width: 768px) {
         padding: 8.8rem 3.2rem 6.4rem;

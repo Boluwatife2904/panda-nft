@@ -10,9 +10,9 @@ const heroImages = ref<HTMLElement>(null);
 onMounted(() => {
     const heroTimeline = gsap.timeline();
     heroTimeline.fromTo(heroSection.value, { opacity: 0 }, { opacity: 1 });
-    heroTimeline.to(heroHeading.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" });
+    heroTimeline.to(heroHeading.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }, "<0.1");
     heroTimeline.to(heroParagraph.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" });
-    heroTimeline.to(heroLink.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }, "-=0.2");
+    heroTimeline.to(heroLink.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }, "-=0.25");
     heroTimeline.fromTo(heroImages.value.children, { opacity: 0, y: 200 }, { opacity: 1, y: 0, stagger: 0.2 });
 });
 </script>
@@ -46,16 +46,13 @@ onMounted(() => {
 
 <style lang="scss">
 .main-hero {
-    margin-top: 2.6rem;
     padding: 0rem 2.4rem;
 
     @media screen and (min-width: 600px) {
-        margin-top: 4rem;
         padding: 0rem 3.2rem;
     }
 
     @media screen and (min-width: 992px) {
-        margin-top: 7rem;
         padding: 0rem 3.2rem;
     }
 
