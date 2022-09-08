@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
-import GetStartedIcon from "./icons/GetStartedIcon.vue";
 const heroSection = ref<HTMLDivElement>(null);
 const heroHeading = ref<HTMLHeadingElement>(null);
 const heroParagraph = ref<HTMLParagraphElement>(null);
@@ -26,7 +25,7 @@ onMounted(() => {
                 </div>
                 <div class="main-hero__right">
                     <p ref="heroParagraph" class="main-hero__paragraph paragraph-regular-body">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                    <a ref="heroLink" href="#" class="main-hero__link paragraph-semibold-body flex items-center text-white"> <span>Get Started</span> <GetStartedIcon /></a>
+                    <a ref="heroLink" href="#" class="main-hero__link paragraph-semibold-body flex items-center text-white"> <span>Get Started</span> <IconsGetStarted /></a>
                 </div>
             </div>
         </section>

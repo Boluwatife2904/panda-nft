@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import useProductStore from "@/stores/ProductStore";
-import SearchIcon from "@/components/icons/SearchIcon.vue";
 const searchTerm = ref("");
 
 const ProductStore = useProductStore();
@@ -14,7 +13,7 @@ const ProductStore = useProductStore();
                 <div class="discover__search relative">
                     <BaseInput v-model="searchTerm" id="search__input" placeholder="Type your keywords..." />
                     <span class="discover__search-icon absolute flex items-center content-center">
-                        <SearchIcon />
+                        <IconsSearch />
                     </span>
                 </div>
             </div>

@@ -1,8 +1,4 @@
-<script setup lang="ts">
-import TwitterIcon from "@/components/icons/TwitterIcon.vue";
-import FacebookIcon from "@/components/icons/FacebookIcon.vue";
-import InstagramIcon from "@/components/icons/InstagramIcon.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <footer class="footer">
@@ -54,13 +50,13 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
                     <p class="footer__contact paragraph-regular-body">2715 Ash Dr. San Jose, South Dakota 83475</p>
                     <ul class="footer__socials grid">
                         <li>
-                            <a href="#"><FacebookIcon /></a>
+                            <a href="#"><IconsFacebook /></a>
                         </li>
                         <li>
-                            <a href="#"><TwitterIcon /></a>
+                            <a href="#"><IconsTwitter /></a>
                         </li>
                         <li>
-                            <a href="#"><InstagramIcon /></a>
+                            <a href="#"><IconsInstagram /></a>
                         </li>
                     </ul>
                 </div>

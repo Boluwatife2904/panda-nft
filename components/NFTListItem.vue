@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
-import HeartIcon from "./icons/HeartIcon.vue";
-import FireIcon from "./icons/FireIcon.vue";
 const likeButton = ref<HTMLButtonElement>(null);
 const isLiked = ref(false);
 const countdown = ref("00 : 00 : 00 : 00");
@@ -63,7 +61,7 @@ const toggleLikeIcon = () => {
     <div class="nft-card">
         <div class="nft-card__image">
             <img :src="product.image" alt="" width="336" height="352" class="block mx-auto" />
-            <button ref="likeButton" class="nft-card__like flex items-center content-center" @click="toggleLikeIcon"><HeartIcon :fill="isLiked ? '#FF4D6D' : '#E7ECF2'" /></button>
+            <button ref="likeButton" class="nft-card__like flex items-center content-center" @click="toggleLikeIcon"><IconsHeart :fill="isLiked ? '#FF4D6D' : '#E7ECF2'" /></button>
         </div>
         <div class="nft-card__content flex space-between">
             <div class="nft-card__user">
@@ -80,7 +78,7 @@ const toggleLikeIcon = () => {
         </div>
         <div class="nft-card__footer flex space-between items-center">
             <div class="nft-card__countdown flex">
-                <FireIcon />
+                <IconsFire />
                 <span class="text-white paragraph-bold-body">{{ countdown }}</span>
             </div>
             <div class="nft-card__bid-button">

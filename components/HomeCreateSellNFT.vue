@@ -1,5 +1,18 @@
 <script setup lang="ts">
-import MonitorIcon from "./icons/MonitorIcon.vue";
+const createAndSellNfts = [
+    {
+        heading: "Set up your wallet",
+        description: "Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner.",
+    },
+    {
+        heading: "Add Your NFTs",
+        description: "Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner.",
+    },
+    {
+        heading: "List Them For Sale",
+        description: "Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner.",
+    },
+];
 </script>
 
 <template>
@@ -8,26 +21,12 @@ import MonitorIcon from "./icons/MonitorIcon.vue";
             <h3 class="heading-3-bold text-center mx-auto create-sell__title text-white">Create and sell your NFTs</h3>
 
             <div class="create-sell__grid grid">
-                <div class="create-sell__card text-center">
+                <div v-for="step in createAndSellNfts" :key="step.heading" class="create-sell__card text-center">
                     <div class="create-sell__card-icon flex content-center items-center mx-auto">
-                        <MonitorIcon />
+                        <IconsMonitor />
                     </div>
-                    <h5 class="create-sell__card-title heading-5-bold text-white">Set up your wallet</h5>
-                    <p class="create-sell__card-description paragraph-regular-caption">Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner.</p>
-                </div>
-                <div class="create-sell__card text-center">
-                    <div class="create-sell__card-icon flex content-center items-center mx-auto">
-                        <MonitorIcon />
-                    </div>
-                    <h5 class="create-sell__card-title heading-5-bold text-white">Add Your NFTs</h5>
-                    <p class="create-sell__card-description paragraph-regular-caption">Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner.</p>
-                </div>
-                <div class="create-sell__card text-center">
-                    <div class="create-sell__card-icon flex content-center items-center mx-auto">
-                        <MonitorIcon />
-                    </div>
-                    <h5 class="create-sell__card-title heading-5-bold text-white">List Them For Sale</h5>
-                    <p class="create-sell__card-description paragraph-regular-caption">Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner.</p>
+                    <h5 class="create-sell__card-title heading-5-bold text-white">{{ step.heading }}</h5>
+                    <p class="create-sell__card-description paragraph-regular-caption">{{ step.description }}</p>
                 </div>
             </div>
         </div>
