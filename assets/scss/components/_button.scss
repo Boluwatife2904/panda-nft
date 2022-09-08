@@ -17,6 +17,11 @@
         border: 1px solid var(--primary-color);
     }
 
+    &--transparent {
+        background-color: transparent;
+        color: var(--gray-500);
+    }
+
     &--padding-large {
         padding: 1.6rem;
         width: 100%;

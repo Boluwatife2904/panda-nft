@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
+import { useRouter } from "vue-router";
 const likeButton = ref<HTMLButtonElement>(null);
 const isLiked = ref(false);
 const countdown = ref("00 : 00 : 00 : 00");
+const router = useRouter();
 
 interface NFT {
     name: string;
+    slug: string;
     image: string;
     currentBid: number;
     username: string;
@@ -55,6 +58,15 @@ const toggleLikeIcon = () => {
         }
     );
 };
+
+const viewProduct = (productSlug: string) => {
+    router.push({
+        name: "product-slug",
+        params: {
+            slug: productSlug,  
+        },
+    });
+};
 </script>
 
 <template>
@@ -82,7 +94,7 @@ const toggleLikeIcon = () => {
                 <span class="text-white paragraph-bold-body">{{ countdown }}</span>
             </div>
             <div class="nft-card__bid-button">
-                <base-button variant="solid-blue" max-width="129px">Bid</base-button>
+                <base-button variant="solid-blue" max-width="129px" @click.native="viewProduct(product.slug)">Bid</base-button>
             </div>
         </div>
     </div>

@@ -17,13 +17,19 @@ const variantClasses = computed(() => {
             return "button--solid-blue";
         case "outline-blue":
             return "button--outline-blue";
+        case "transparent":
+            return "button--transparent";
     }
 });
 
 const weightClasses = computed(() => {
     switch (props.weight) {
+        case "bold":
+            return "heading-6-bold";
         case "semibold":
             return "paragraph-semibold-body";
+        case "medium":
+            return "heading-6-medium";
         default:
             return "paragraph-regular-body";
     }
