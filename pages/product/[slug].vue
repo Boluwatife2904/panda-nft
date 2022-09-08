@@ -1,6 +1,6 @@
 <script setup lang="ts">
 type ProductTabs = "description" | "offers" | "price-history";
-const selectedTab = ref<ProductTabs>("description");
+const selectedTab = ref<ProductTabs>("offers");
 const setSelectedTab = (tab: ProductTabs) => {
     selectedTab.value = tab;
 };
@@ -11,7 +11,7 @@ const setSelectedTab = (tab: ProductTabs) => {
         <div class="container">
             <ProductTabChanger :selected-tab="selectedTab" @change-selected-tab="setSelectedTab" />
             <ProductDescription v-show="selectedTab === 'description'" />
-            <ProductOffers />
+            <ProductOffers v-show="selectedTab === 'offers'" />
             <ProductPriceHistory />
         </div>
     </section>

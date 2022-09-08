@@ -93,38 +93,38 @@ body {
 }
 
 .paragraph-bold-body {
-    @include typography(700, 1.6rem, 3.2rem);
+    @include typography(700, 1.6rem, 2.4rem);
 }
 
 .paragraph-bold-caption {
-    @include typography(700, 1.4rem, 2.4rem);
+    @include typography(700, 1.4rem, 2rem);
 }
 
 .paragraph-bold-label {
-    @include typography(700, 1.2rem, 3.2rem);
+    @include typography(700, 1.2rem, 1.8rem);
 }
 
 .paragraph-semibold-body {
-    @include typography(600, 1.6rem, 3.2rem);
+    @include typography(600, 1.6rem, 1.4rem);
 }
 
 .paragraph-semibold-caption {
-    @include typography(600, 1.4rem, 2.4rem);
+    @include typography(600, 1.4rem, 2rem);
 }
 
 .paragraph-semibold-label {
-    @include typography(600, 1.2rem, 3.2rem);
+    @include typography(600, 1.2rem, 1.8rem);
 }
 
 .paragraph-regular-body {
-    @include typography(400, 1.6rem, 3.2rem);
+    @include typography(400, 1.6rem, 2.4rem);
 }
 
 .paragraph-regular-caption {
-    @include typography(400, 1.4rem, 2.4rem);
+    @include typography(400, 1.4rem, 2rem);
 }
 
 .paragraph-regular-label {
-    @include typography(400, 1.2rem, 3.2rem);
+    @include typography(400, 1.2rem, 1.8rem);
 }
 
