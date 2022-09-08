@@ -36,7 +36,11 @@ defineProps<Props>();
 
 <style lang="scss">
 .offer {
-    gap: 2.1rem;
+    gap: 1.6rem;
+
+    @media screen and (min-width: 600px) {
+        gap: 2.1rem;
+    }
 
     &__image {
         height: 5.6rem;
@@ -60,6 +64,11 @@ defineProps<Props>();
     &__placed-bid {
         color: var(--gray-400);
         margin-left: 0.8rem;
+        display: none;
+
+        @media screen and (min-width: 600px) {
+            display: inline-block;
+        }
     }
 
     &__timestamp {

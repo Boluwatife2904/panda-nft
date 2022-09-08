@@ -1,6 +1,6 @@
 <script setup lang="ts">
 type ProductTabs = "description" | "offers" | "price-history";
-const selectedTab = ref<ProductTabs>("offers");
+const selectedTab = ref<ProductTabs>("description");
 const setSelectedTab = (tab: ProductTabs) => {
     selectedTab.value = tab;
 };
