@@ -5,7 +5,7 @@
         <div class="container">
             <div class="grid-container grid">
                 <div class="footer__logo">
-                    <img loading="lazy" src="~/assets/images/pandanft-logo.svg" width="140" height="40" alt="Panda NFT Logo" />
+                    <img src="~/assets/images/pandanft-logo.png" width="140" height="40" alt="Panda NFT Logo" />
                     <p class="footer__description paragraph-regular-body">The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.</p>
                 </div>
                 <div class="footer__wrapper">
