@@ -6,7 +6,7 @@ const useProductStore = defineStore("productStore", {
             nfts: [
                 // 1
                 {
-                    image: "/images/nfts/1.svg",
+                    image: "/images/nfts/1.png",
                     name: "Dao Vinci #0000",
                     slug: "dao-vinci-0000",
                     currentBid: 4.89,
@@ -14,11 +14,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: true,
                     dueDate: "09/16/2022",
                     isHot: false,
-                    user: "/images/users/1.svg",
+                    user: "/images/users/1.png",
                 },
                 // 2
                 {
-                    image: "/images/nfts/2.svg",
+                    image: "/images/nfts/2.png",
                     name: "Fangster 8668",
                     slug: "fangster-8668",
                     currentBid: 2.38,
@@ -26,11 +26,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: true,
                     dueDate: "09/13/2022",
                     isHot: false,
-                    user: "/images/users/2.svg",
+                    user: "/images/users/2.png",
                 },
                 // 3
                 {
-                    image: "/images/nfts/3.svg",
+                    image: "/images/nfts/3.png",
                     name: "Sherbet 3062",
                     slug: "sherbet-3062",
                     currentBid: 1.24,
@@ -38,11 +38,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: true,
                     dueDate: "09/14/2022",
                     isHot: false,
-                    user: "/images/users/3.svg",
+                    user: "/images/users/3.png",
                 },
                 // 4
                 {
-                    image: "/images/nfts/4.svg",
+                    image: "/images/nfts/4.png",
                     name: "Dao Vinci #0001",
                     slug: "dao-vinci-0001",
                     currentBid: 7.23,
@@ -50,11 +50,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/24/2022",
                     isHot: true,
-                    user: "/images/users/4.svg",
+                    user: "/images/users/4.png",
                 },
                 // 5
                 {
-                    image: "/images/nfts/5.svg",
+                    image: "/images/nfts/5.png",
                     name: "Fangster 8669",
                     slug: "fangster-8669",
                     currentBid: 3.01,
@@ -62,11 +62,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/18/2022",
                     isHot: true,
-                    user: "/images/users/5.svg",
+                    user: "/images/users/5.png",
                 },
                 // 6
                 {
-                    image: "/images/nfts/6.svg",
+                    image: "/images/nfts/6.png",
                     name: "Sherbet 3063",
                     slug: "sherbet-3063",
                     currentBid: 4.84,
@@ -74,11 +74,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/14/2022",
                     isHot: true,
-                    user: "/images/users/6.svg",
+                    user: "/images/users/6.png",
                 },
                 // 7
                 {
-                    image: "/images/nfts/7.svg",
+                    image: "/images/nfts/7.png",
                     name: "Cute Shiba",
                     slug: "cute-shiba",
                     currentBid: 0.75,
@@ -86,11 +86,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/21/2022",
                     isHot: true,
-                    user: "/images/users/7.svg",
+                    user: "/images/users/7.png",
                 },
                 // 8
                 {
-                    image: "/images/nfts/8.svg",
+                    image: "/images/nfts/8.png",
                     name: "Cute Monkey",
                     slug: "cute-monkey",
                     currentBid: 2.88,
@@ -98,11 +98,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/18/2022",
                     isHot: true,
-                    user: "/images/users/8.svg",
+                    user: "/images/users/8.png",
                 },
                 // 9
                 {
-                    image: "/images/nfts/9.svg",
+                    image: "/images/nfts/9.png",
                     name: "Cute Astronaut",
                     slug: "cute-astronaut",
                     currentBid: 5.46,
@@ -110,11 +110,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/14/2022",
                     isHot: true,
-                    user: "/images/users/9.svg",
+                    user: "/images/users/9.png",
                 },
                 // 10
                 {
-                    image: "/images/nfts/10.svg",
+                    image: "/images/nfts/10.png",
                     name: "Hamlet Contemplates 001",
                     slug: "hamlet-contemplates-001",
                     currentBid: 4.56,
@@ -122,11 +122,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/17/2022",
                     isHot: false,
-                    user: "/images/users/10.svg",
+                    user: "/images/users/1.png",
                 },
                 // 11
                 {
-                    image: "/images/nfts/11.svg",
+                    image: "/images/nfts/11.png",
                     name: "Hamlet Contemplates 002",
                     slug: "hamlet-contemplates-002",
                     currentBid: 1.44,
@@ -134,11 +134,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/27/2022",
                     isHot: false,
-                    user: "/images/users/11.svg",
+                    user: "/images/users/2.png",
                 },
                 // 12
                 {
-                    image: "/images/nfts/12.svg",
+                    image: "/images/nfts/12.png",
                     name: "Hamlet Contemplates 003",
                     slug: "hamlet-contemplates-003",
                     currentBid: 9.6,
@@ -146,11 +146,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/17/2022",
                     isHot: false,
-                    user: "/images/users/1.svg",
+                    user: "/images/users/3.png",
                 },
                 // 13
                 {
-                    image: "/images/nfts/13.svg",
+                    image: "/images/nfts/13.png",
                     name: "Doodle #554",
                     slug: "doodle-554",
                     currentBid: 0.68,
@@ -158,11 +158,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/23/2022",
                     isHot: false,
-                    user: "/images/users/2.svg",
+                    user: "/images/users/4.png",
                 },
                 // 14
                 {
-                    image: "/images/nfts/14.svg",
+                    image: "/images/nfts/14.png",
                     name: "Doodle #6189",
                     slug: "doodle-6189",
                     currentBid: 2.42,
@@ -170,11 +170,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/20/2022",
                     isHot: false,
-                    user: "/images/users/3.svg",
+                    user: "/images/users/5.png",
                 },
                 // 15
                 {
-                    image: "/images/nfts/15.svg",
+                    image: "/images/nfts/15.png",
                     name: "Doodle #30",
                     slug: "doodle-30",
                     currentBid: 1.97,
@@ -182,11 +182,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/22/2022",
                     isHot: false,
-                    user: "/images/users/4.svg",
+                    user: "/images/users/6.png",
                 },
                 // 16
                 {
-                    image: "/images/nfts/16.svg",
+                    image: "/images/nfts/16.png",
                     name: "Hamlet Contemplates 004",
                     slug: "hamlet-contemplates-004",
                     currentBid: 5.45,
@@ -194,11 +194,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/23/2022",
                     isHot: false,
-                    user: "/images/users/5.svg",
+                    user: "/images/users/7.png",
                 },
                 // 17
                 {
-                    image: "/images/nfts/17.svg",
+                    image: "/images/nfts/17.png",
                     name: "Hamlet Contemplates 005",
                     slug: "hamlet-contemplates-005",
                     currentBid: 2.48,
@@ -206,11 +206,11 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/24/2022",
                     isHot: false,
-                    user: "/images/users/6.svg",
+                    user: "/images/users/8.png",
                 },
                 // 18
                 {
-                    image: "/images/nfts/18.svg",
+                    image: "/images/nfts/18.png",
                     name: "Hamlet Contemplates 006",
                     slug: "hamlet-contemplates-006",
                     currentBid: 7.12,
@@ -218,7 +218,7 @@ const useProductStore = defineStore("productStore", {
                     isLive: false,
                     dueDate: "09/21/2022",
                     isHot: false,
-                    user: "/images/users/7.svg",
+                    user: "/images/users/9.png",
                 },
             ],
         };

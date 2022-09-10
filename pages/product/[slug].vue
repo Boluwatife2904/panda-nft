@@ -28,8 +28,7 @@ watchEffect(() => {
     product.value = ProductStore.singleProductData(slug);
 
     if (route.name === "product-slug" && product.value === undefined) {
-        // TODO: Handle handling of wrong route params
-        // throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
+        throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
     }
 });
 </script>

@@ -31,13 +31,13 @@ const heroImages = ref<HTMLElement>(null);
         </section>
         <section ref="heroImages" class="main-hero__images flex">
             <div class="main-hero__image">
-                <img loading="lazy" src="/images/hero-section-image-one.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
+                <img height="352" width="498" src="/images/hero-section-image-one.png" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
             </div>
             <div class="main-hero__image">
-                <img loading="lazy" src="/images/hero-section-image-two.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
+                <img height="352" width="498" src="/images/hero-section-image-two.png" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
             </div>
             <div class="main-hero__image">
-                <img loading="lazy" src="/images/hero-section-image-three.svg" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
+                <img height="352" width="498" src="/images/hero-section-image-three.png" class="main-hero__image block" alt="First Image in the hero section of the landing page" />
             </div>
         </section>
     </div>

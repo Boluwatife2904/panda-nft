@@ -47,7 +47,7 @@ const connectWalletButton = ref<HTMLButtonElement>(null);
         <div class="container flex">
             <div ref="navbarLogo" class="navbar__logo">
                 <nuxt-link :to="{ name: 'index' }">
-                    <img loading="lazy" src="~/assets/images/pandanft-logo.svg" width="140" height="40" alt="Panda NFT Logo" />
+                    <img loading="lazy" src="~/assets/images/pandanft-logo.png" width="140" height="40" alt="Panda NFT Logo" />
                 </nuxt-link>
             </div>
             <ul ref="navbarLinkItems" class="navbar__links">

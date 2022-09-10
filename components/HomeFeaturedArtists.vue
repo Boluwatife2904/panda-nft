@@ -1,26 +1,26 @@
 <script setup lang="ts">
 const featuredArtists = [
     {
-        coverImage: "/images/artists/artist-one-cover-image.svg",
-        profileImage: "/images/artists/artist-one-profile-image.svg",
+        coverImage: "/images/artists/artist-one-cover-image.png",
+        profileImage: "/images/artists/artist-one-profile-image.png",
         name: "CryptoPunks",
         followers: "818.7k",
     },
     {
-        coverImage: "/images/artists/artist-two-cover-image.svg",
-        profileImage: "/images/artists/artist-two-profile-image.svg",
+        coverImage: "/images/artists/artist-two-cover-image.png",
+        profileImage: "/images/artists/artist-two-profile-image.png",
         name: "Doodles",
         followers: "74.9k",
     },
     {
-        coverImage: "/images/artists/artist-three-cover-image.svg",
-        profileImage: "/images/artists/artist-three-profile-image.svg",
+        coverImage: "/images/artists/artist-three-cover-image.png",
+        profileImage: "/images/artists/artist-three-profile-image.png",
         name: "Bored Ape Yacht",
         followers: "378.7k",
     },
     {
-        coverImage: "/images/artists/artist-four-cover-image.svg",
-        profileImage: "/images/artists/artist-four-profile-image.svg",
+        coverImage: "/images/artists/artist-four-cover-image.png",
+        profileImage: "/images/artists/artist-four-profile-image.png",
         name: "Capsule House",
         followers: "19.3k",
     },
