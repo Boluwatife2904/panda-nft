@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 const heroSection = ref<HTMLDivElement>(null);
 const heroHeading = ref<HTMLHeadingElement>(null);
 const heroParagraph = ref<HTMLParagraphElement>(null);
 const heroLink = ref<HTMLAnchorElement>(null);
 const heroImages = ref<HTMLElement>(null);
 
-onMounted(() => {
-    const heroTimeline = gsap.timeline();
-    heroTimeline.fromTo(heroSection.value, { opacity: 0 }, { opacity: 1 });
-    heroTimeline.to(heroHeading.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }, "<0.1");
-    heroTimeline.to(heroParagraph.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" });
-    heroTimeline.to(heroLink.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }, "-=0.25");
-    heroTimeline.fromTo(heroImages.value.children, { opacity: 0, y: 200 }, { opacity: 1, y: 0, stagger: 0.2 });
-});
+// onMounted(() => {
+//     const heroTimeline = gsap.timeline();
+//     heroTimeline.fromTo(heroSection.value, { opacity: 0 }, { opacity: 1 });
+//     heroTimeline.to(heroHeading.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }, "<0.1");
+//     heroTimeline.to(heroParagraph.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" });
+//     heroTimeline.to(heroLink.value, { y: 0, opacity: 1, clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }, "-=0.25");
+//     heroTimeline.fromTo(heroImages.value.children, { opacity: 0, y: 200 }, { opacity: 1, y: 0, stagger: 0.2 });
+// });
 </script>
 
 <template>
@@ -64,24 +64,24 @@ onMounted(() => {
     }
 
     &__heading {
-        transition: all 0.5s;
-        transform: translateY(100px);
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        // transform: translateY(100px);
+        // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        // transition: all 0.5s;
     }
 
     &__paragraph {
-        transition: all 0.5s;
         color: var(--gray-500);
         margin-bottom: 2.4rem;
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-        transform: translateY(100px);
+        // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        // transform: translateY(100px);
+        // transition: all 0.5s;
     }
 
     &__link {
-        transition: all 0.5s;
         gap: 0.8rem;
-        transform: translateY(100px);
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        // transform: translateY(100px);
+        // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        // transition: all 0.5s;
 
         span {
             text-decoration: underline;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 
 const navbarLinks = ref([
     {
@@ -33,13 +33,13 @@ const navbarLogo = ref<HTMLImageElement>(null);
 const navbarLinkItems = ref<HTMLUListElement>(null);
 const connectWalletButton = ref<HTMLButtonElement>(null);
 
-onMounted(() => {
-    const navbarTimeline = gsap.timeline();
-    navbarTimeline.from(navbar.value, { opacity: 0 });
-    navbarTimeline.from(navbarLogo.value, { y: -50, opacity: 0 });
-    navbarTimeline.from(navbarLinkItems.value.children, { x: 20, opacity: 0, stagger: 0.2 }, "-=0.5");
-    navbarTimeline.from(connectWalletButton.value, { y: 20, opacity: 0 }, "-=0.7");
-});
+// onMounted(() => {
+//     const navbarTimeline = gsap.timeline();
+//     navbarTimeline.from(navbar.value, { opacity: 0 });
+//     navbarTimeline.from(navbarLogo.value, { y: -50, opacity: 0 });
+//     navbarTimeline.from(navbarLinkItems.value.children, { x: 20, opacity: 0, stagger: 0.2 }, "-=0.5");
+//     navbarTimeline.from(connectWalletButton.value, { y: 20, opacity: 0 }, "-=0.7");
+// });
 </script>
 
 <template>

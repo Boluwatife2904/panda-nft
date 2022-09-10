@@ -1,4 +1,4 @@
-export default function useCountdown(date: string) {
+export function useCountdown(date: string) {
     const countdown = ref("00 : 00 : 00 : 00");
 
     const convertToCountdown = setInterval(() => {
