@@ -227,6 +227,9 @@ const useProductStore = defineStore("productStore", {
     getters: {
         liveAuctions: (state) => state.nfts.filter((nft) => nft.isLive),
         hotNFTs: (state) => state.nfts.filter((nft) => nft.isHot),
+        singleProductData: (state) => {
+            return (productSlug: string) => state.nfts.find((nft) => nft.slug === productSlug);
+        },
     },
 });
 

@@ -41,16 +41,16 @@
     }
 
     &--view-more {
-        padding: 0.8rem;
+        padding: 1.2rem;
         width: 100%;
-        max-width: 10rem;
+        max-width: 12rem;
         font-size: 1.2rem;
-        border-radius: 1.6rem;
+        border-radius: 0.8rem;
 
         @media screen and (min-width: 768px) {
             max-width: 17.5rem;
             font-size: 1.4rem;
-            padding: 1.2rem;
+            padding: 1.4rem;
         }
     }
 }

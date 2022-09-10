@@ -69,7 +69,11 @@ onMounted(() => {
 <style lang="scss">
 .navbar {
     padding: 4rem 2rem;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 600px) {
+        margin-bottom: 8rem;
+    }
 
     .container {
         justify-content: space-between;

@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 import { useRouter } from "vue-router";
 const likeButton = ref<HTMLButtonElement>(null);
 const isLiked = ref(false);
-const countdown = ref("00 : 00 : 00 : 00");
 const router = useRouter();
 
 interface NFT {
@@ -22,25 +21,7 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const convertToCountdown = setInterval(() => {
-    const todaysDate = new Date();
-    const futureDate = new Date(props.product.dueDate);
-
-    let dateIsStillInFuture = todaysDate.getTime() < futureDate.getTime();
-    if (dateIsStillInFuture) {
-        const timeleft = futureDate.getTime() - todaysDate.getTime();
-
-        const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-
-        countdown.value = `${days < 10 ? "0" + days : days} : ${hours < 10 ? "0" + hours : hours} : ${minutes < 10 ? "0" + minutes : minutes} : ${seconds < 10 ? "0" + seconds : seconds}`;
-    } else {
-        clearInterval(convertToCountdown);
-        countdown.value = "00 : 00 : 00 : 00";
-    }
-}, 1000);
+const { countdown } = useCountdown(props.product.dueDate)
 
 const toggleLikeIcon = () => {
     gsap.fromTo(
@@ -94,7 +75,7 @@ const viewProduct = (productSlug: string) => {
                 <span class="text-white paragraph-bold-body">{{ countdown }}</span>
             </div>
             <div class="nft-card__bid-button">
-                <base-button variant="solid-blue" max-width="129px" @click.native="viewProduct(product.slug)">Bid</base-button>
+                <base-button variant="solid-blue" radius="small" max-width="129px" @click.native="viewProduct(product.slug)">Bid</base-button>
             </div>
         </div>
     </div>
