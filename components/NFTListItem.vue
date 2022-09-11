@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
-import { useRouter } from "vue-router";
 const likeButton = ref<HTMLButtonElement>(null);
 const isLiked = ref(false);
-const router = useRouter();
 
 interface NFT {
     name: string;
@@ -21,7 +19,7 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const { countdown } = useCountdown(props.product.dueDate)
+const { countdown } = useCountdown(props.product.dueDate);
 
 const toggleLikeIcon = () => {
     gsap.fromTo(
@@ -41,10 +39,10 @@ const toggleLikeIcon = () => {
 };
 
 const viewProduct = (productSlug: string) => {
-    router.push({
+    return navigateTo({
         name: "product-slug",
         params: {
-            slug: productSlug,  
+            slug: productSlug,
         },
     });
 };

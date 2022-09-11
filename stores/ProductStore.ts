@@ -230,6 +230,7 @@ const useProductStore = defineStore("productStore", {
         singleProductData: (state) => {
             return (productSlug: string) => state.nfts.find((nft) => nft.slug === productSlug);
         },
+        anotherNFTs: (state) => [...state.nfts].slice(-3)
     },
 });
 

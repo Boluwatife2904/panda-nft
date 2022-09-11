@@ -16,6 +16,7 @@ interface Product {
 }
 
 const product = ref<Product>();
+const otherNFTs = ref<Product[]>([]);
 
 type ProductTabs = "description" | "offers" | "price-history";
 const selectedTab = ref<ProductTabs>("description");
@@ -26,6 +27,7 @@ const setSelectedTab = (tab: ProductTabs) => {
 watchEffect(() => {
     const slug = route.params.slug as string;
     product.value = ProductStore.singleProductData(slug);
+    otherNFTs.value = ProductStore.anotherNFTs;
 
     if (route.name === "product-slug" && product.value === undefined) {
         throw createError({ statusCode: 404, statusMessage: "Page Not Found", fatal: true });
@@ -40,7 +42,8 @@ watchEffect(() => {
             <ProductTabChanger :selected-tab="selectedTab" @change-selected-tab="setSelectedTab" />
             <ProductDescription v-show="selectedTab === 'description'" />
             <ProductOffers v-show="selectedTab === 'offers'" />
-            <ProductPriceHistory />
+            <ProductPriceHistory v-show="selectedTab === 'price-history'" />
+            <ProductAnotherNFTs :products="otherNFTs" />
         </div>
     </section>
 </template>

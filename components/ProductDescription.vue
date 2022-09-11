@@ -23,7 +23,6 @@ const productDescriptionData = [
 .single-product__description {
     max-width: 68.8rem;
     color: var(--gray-200);
-    margin-bottom: 16rem;
 
     &-text {
         margin-bottom: 2.4rem;

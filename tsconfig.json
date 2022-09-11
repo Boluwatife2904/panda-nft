@@ -1,5 +1,10 @@
 {
     // https://v3.nuxtjs.org/concepts/typescript
-    "extends": "./.nuxt/tsconfig.json"
+    "extends": "./.nuxt/tsconfig.json",
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "jsx": "preserve"
+    }
 }
 

@@ -16,7 +16,7 @@
         "eslint-plugin-nuxt": "^3.2.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-vue": "^9.3.0",
-        "nuxt": "3.0.0-rc.6",
+        "nuxt": "^3.0.0-rc.9",
         "sass": "^1.54.3"
     },
     "dependencies": {
