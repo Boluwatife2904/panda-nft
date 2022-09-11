@@ -25,7 +25,7 @@ const chartOptions: ChartOptions = {
     },
     elements: {
         line: {
-            tension: 0.15,
+            tension: 0.4,
         },
         point: {
             radius: 0,
