@@ -13,15 +13,13 @@ const closeModal = () => {
     emit("close-modal", false);
 };
 
-onMounted(() => {
-    watchEffect(() => {
-        const isOpen = props.isOpen;
-        if (isOpen) {
-            document.body.classList.add("overflow-hidden");
-        } else {
-            document.body.classList.remove("overflow-hidden");
-        }
-    });
+watchEffect(() => {
+    const isOpen = props.isOpen;
+    if (isOpen && process.client) {
+        document.body.classList.add("overflow-hidden");
+    } else if (!isOpen && process.client) {
+        document.body.classList.remove("overflow-hidden");
+    }
 });
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
 
 const navbarLinks = ref([
     {
@@ -28,10 +28,10 @@ const navbarLinks = ref([
     },
 ]);
 
-const navbar = ref<HTMLElement>(null);
-const navbarLogo = ref<HTMLImageElement>(null);
-const navbarLinkItems = ref<HTMLUListElement>(null);
-const connectWalletButton = ref<HTMLButtonElement>(null);
+// const navbar = ref<HTMLElement>(null);
+// const navbarLogo = ref<HTMLImageElement>(null);
+// const navbarLinkItems = ref<HTMLUListElement>(null);
+// const connectWalletButton = ref<HTMLButtonElement>(null);
 
 // onMounted(() => {
 //     const navbarTimeline = gsap.timeline();
@@ -41,9 +41,13 @@ const connectWalletButton = ref<HTMLButtonElement>(null);
 //     navbarTimeline.from(connectWalletButton.value, { y: 20, opacity: 0 }, "-=0.7");
 // });
 
-const isOpen = ref(false);
+const mobileNavRef = ref<HTMLUListElement>(null);
+const mobileNavLinksRef = ref<HTMLUListElement>(null);
+const mobileNavButtonRef = ref<HTMLSpanElement>(null);
+
+const showConnectWalletModal = ref(false);
 const toggleConnectWalletModal = (value: boolean) => {
-    isOpen.value = value;
+    showConnectWalletModal.value = value;
 };
 
 const selectedNetwork = ref("");
@@ -68,6 +72,47 @@ const walletOptions = [
 const chooseWallet = (wallet: string) => {
     selectedWallet.value = wallet;
 };
+
+const navbarIsOpen = ref(false);
+const mobileNavbarTL = gsap.timeline({ paused: true });
+
+onMounted(() => {
+    mobileNavbarTL.fromTo(mobileNavRef.value, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 });
+    mobileNavbarTL.fromTo(mobileNavLinksRef.value.children, { x: -50, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.1 }, 0);
+    mobileNavbarTL.fromTo(mobileNavButtonRef.value, { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
+});
+
+const toggleNavbar = () => {
+    navbarIsOpen.value = !navbarIsOpen.value;
+    if (navbarIsOpen.value === false) {
+        mobileNavbarTL.reverse();
+    } else {
+        mobileNavbarTL.play();
+    }
+};
+const closeNavbarThenOpenConnectWalletModal = () => {
+    toggleNavbar();
+    mobileNavbarTL.then(() => {
+        toggleConnectWalletModal(true);
+    });
+};
+
+watchEffect(() => {
+    const navIsOpen = navbarIsOpen.value;
+    if (navIsOpen && process.client) {
+        document.body.classList.add("overflow-hidden");
+    } else if (!navIsOpen && process.client) {
+        document.body.classList.remove("overflow-hidden");
+    }
+});
+
+// Close Navbar
+watch(useRoute(), () => {
+    if (navbarIsOpen.value) {
+        navbarIsOpen.value = false;
+        mobileNavbarTL.reverse();
+    }
+});
 </script>
 
 <template>
@@ -84,16 +129,26 @@ const chooseWallet = (wallet: string) => {
                 </li>
             </ul>
             <div ref="connectWalletButton" class="navbar__connect">
-                <BaseButton variant="outline-blue" max-width="100%" @click="toggleConnectWalletModal(true)">Connect Wallet</BaseButton>
+                <BaseButton variant="outline-blue" max-width="100%" radius="small" padding="large" @click="toggleConnectWalletModal(true)">Connect Wallet</BaseButton>
             </div>
-            <button class="navbar__menu hide-on-desktop">
+            <button class="navbar__menu hide-on-desktop" @click="toggleNavbar">
                 <span class="navbar__menu-bar block"></span>
                 <span class="navbar__menu-bar block"></span>
             </button>
         </div>
     </nav>
+    <nav ref="mobileNavRef" class="mobile-navbar">
+        <ul ref="mobileNavLinksRef" class="navbar__links--mobile">
+            <li v-for="{ name, title } in navbarLinks" class="navigation__item--navbar-mobile">
+                <nuxt-link :to="{ name }" class="navigation__link navigation__link--navbar-mobile" :class="{ 'navigation__link--active-mobile': $route.name === name }">{{ title }}</nuxt-link>
+            </li>
+        </ul>
+        <span ref="mobileNavButtonRef" class="mobile-navbar__button flex">
+            <base-button variant="solid-blue" radius="small" padding="large" @click="closeNavbarThenOpenConnectWalletModal">Connect Wallet</base-button>
+        </span>
+    </nav>
     <!-- Connect Wallet Modal -->
-    <base-modal :is-open="isOpen" title="Connect your wallet" @close-modal="toggleConnectWalletModal">
+    <base-modal :is-open="showConnectWalletModal" title="Connect your wallet" @close-modal="toggleConnectWalletModal">
         <template #header>
             <div>
                 <p class="paragraph-regular-caption connect-wallet__subtitle">Select what network and wallet you want to connect below</p>
@@ -121,6 +176,8 @@ const chooseWallet = (wallet: string) => {
 .navbar {
     padding: 4rem 2rem;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 3;
 
     @media screen and (min-width: 600px) {
         margin-bottom: 8rem;
@@ -169,6 +226,23 @@ const chooseWallet = (wallet: string) => {
     }
 }
 
+.mobile-navbar {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    inset: 0;
+    background: #02050e;
+    padding: 20px;
+    z-index: 2;
+    padding: 12.4rem 2rem 0;
+    opacity: 0;
+    visibility: hidden;
+
+    &__button {
+        margin-top: 4.8rem;
+    }
+}
+
 .connect-wallet {
     &__subtitle {
         color: var(--gray-900);
@@ -179,7 +253,7 @@ const chooseWallet = (wallet: string) => {
 .network-options,
 .wallet-options {
     margin-bottom: 2.4rem;
-    
+
     &__header {
         margin-bottom: 1rem;
     }

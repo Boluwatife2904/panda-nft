@@ -6,6 +6,12 @@
             &:not(:last-child) {
                 margin-right: 3.2rem;
             }
+
+            &-mobile {
+                &:not(:last-child) {
+                    margin-bottom: 3.2rem;
+                }
+            }
         }
     }
 
@@ -20,6 +26,12 @@
 
         &--navbar {
             font-weight: 600;
+
+            &-mobile {
+                &:hover {
+                    color: #fff;
+                }
+            }
         }
 
         &--active {
@@ -34,6 +46,10 @@
                 background-color: var(--primary-color);
                 left: 0;
                 top: 3.2rem;
+            }
+
+            &-mobile {
+                color: #fff;
             }
         }
     }
