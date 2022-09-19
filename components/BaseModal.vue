@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { gsap } from "gsap";
+
 interface Props {
     isOpen: boolean;
     title?: string;
@@ -21,25 +23,67 @@ watchEffect(() => {
         document.body.classList.remove("overflow-hidden");
     }
 });
+
+const beforeEnter = (el) => {
+    gsap.set(el, {
+        opacity: 0,
+    });
+};
+
+const enter = (el, done) => {
+    const modalTimeline = gsap.timeline();
+    modalTimeline
+        .to(el, {
+            opacity: 1,
+        })
+        .from(
+            el.children,
+            {
+                opacity: 0,
+                y: 100,
+                onComplete: done,
+            },
+            "<"
+        );
+};
+
+const beforeLeave = (el, done) => {
+    const modalTimeline = gsap.timeline();
+    modalTimeline
+        .to(el.children, {
+            opacity: 0,
+            y: 50,
+        })
+        .to(
+            el,
+            {
+                opacity: 0,
+                onComplete: done,
+            },
+            "<"
+        );
+};
 </script>
 
 <template>
-    <div v-if="isOpen" class="modal">
-        <div class="modal__wrapper">
-            <div class="modal__body relative">
-                <div class="modal__header">
-                    <h5 v-if="title" class="modal__title heading-5-bold">{{ title }}</h5>
-                    <slot name="header"></slot>
+    <transition @before-enter="beforeEnter" @enter="enter" @leave="beforeLeave" appear>
+        <div v-if="isOpen" class="modal">
+            <div class="modal__wrapper">
+                <div ref="modalBody" class="modal__body relative">
+                    <div class="modal__header">
+                        <h5 v-if="title" class="modal__title heading-5-bold">{{ title }}</h5>
+                        <slot name="header"></slot>
+                    </div>
+                    <div class="modal__content">
+                        <slot name="content"></slot>
+                    </div>
+                    <button class="modal__close absolute flex items-center content-center" @click="closeModal">
+                        <span>&times;</span>
+                    </button>
                 </div>
-                <div class="modal__content">
-                    <slot name="content"></slot>
-                </div>
-                <button class="modal__close absolute flex items-center content-center" @click="closeModal">
-                    <span>&times;</span>
-                </button>
             </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <style lang="scss">
