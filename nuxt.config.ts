@@ -4,6 +4,9 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
     app: {
         head: {
+            htmlAttrs: {
+                lang: "en",
+            },
             title: "Panda NFTs",
             meta: [
                 { name: "theme-color", content: "#02050e" },
