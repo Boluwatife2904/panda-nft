@@ -1,4 +1,8 @@
 <script setup lang="ts">
+interface Props {
+    selectedCategory: string;
+}
+
 const allFilters = ref([
     { slug: "all", title: "😎 All" },
     { slug: "music", title: "🎷 Music" },
@@ -7,17 +11,22 @@ const allFilters = ref([
     { slug: "virtual", title: "🤖 Virtual" },
     { slug: "videos", title: "📹 Videos" },
 ]);
-const selectedFilter = ref("all");
+
+defineProps<Props>();
+
+const emit = defineEmits<{
+    (e: "change-category", category: string): void;
+}>();
 
 const selectAFilter = (filter: string) => {
-    selectedFilter.value = filter;
+    emit("change-category", filter);
 };
 </script>
 
 <template>
     <ul class="filters flex items-center">
         <li v-for="filter in allFilters" class="filters__item text-white">
-            <base-button :variant="selectedFilter === filter.slug ? 'solid-blue' : 'outline-blue'" radius="small" @click="selectAFilter(filter.slug)">{{ filter.title }}</base-button>
+            <base-button :variant="selectedCategory === filter.slug ? 'solid-blue' : 'outline-blue'" radius="small" @click="selectAFilter(filter.slug)">{{ filter.title }}</base-button>
         </li>
     </ul>
 </template>

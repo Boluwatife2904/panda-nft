@@ -15,6 +15,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/16/2022",
                     isHot: false,
                     user: "/images/users/1.png",
+                    category: "music",
                 },
                 // 2
                 {
@@ -27,6 +28,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/13/2022",
                     isHot: false,
                     user: "/images/users/2.png",
+                    category: "music",
                 },
                 // 3
                 {
@@ -39,6 +41,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/14/2022",
                     isHot: false,
                     user: "/images/users/3.png",
+                    category: "music",
                 },
                 // 4
                 {
@@ -51,6 +54,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/24/2022",
                     isHot: true,
                     user: "/images/users/4.png",
+                    category: "art",
                 },
                 // 5
                 {
@@ -63,6 +67,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/18/2022",
                     isHot: true,
                     user: "/images/users/5.png",
+                    category: "music",
                 },
                 // 6
                 {
@@ -75,6 +80,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/14/2022",
                     isHot: true,
                     user: "/images/users/6.png",
+                    category: "videos",
                 },
                 // 7
                 {
@@ -87,6 +93,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/21/2022",
                     isHot: true,
                     user: "/images/users/7.png",
+                    category: "art",
                 },
                 // 8
                 {
@@ -99,6 +106,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/18/2022",
                     isHot: true,
                     user: "/images/users/8.png",
+                    category: "sports",
                 },
                 // 9
                 {
@@ -111,6 +119,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/14/2022",
                     isHot: true,
                     user: "/images/users/9.png",
+                    category: "virtual",
                 },
                 // 10
                 {
@@ -123,6 +132,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/17/2022",
                     isHot: false,
                     user: "/images/users/1.png",
+                    category: "art",
                 },
                 // 11
                 {
@@ -135,6 +145,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/27/2022",
                     isHot: false,
                     user: "/images/users/2.png",
+                    category: "art",
                 },
                 // 12
                 {
@@ -147,6 +158,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/17/2022",
                     isHot: false,
                     user: "/images/users/3.png",
+                    category: "virtual",
                 },
                 // 13
                 {
@@ -159,6 +171,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/23/2022",
                     isHot: false,
                     user: "/images/users/4.png",
+                    category: "virtual",
                 },
                 // 14
                 {
@@ -171,6 +184,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/20/2022",
                     isHot: false,
                     user: "/images/users/5.png",
+                    category: "sports",
                 },
                 // 15
                 {
@@ -183,6 +197,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/22/2022",
                     isHot: false,
                     user: "/images/users/6.png",
+                    category: "sports",
                 },
                 // 16
                 {
@@ -195,6 +210,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/23/2022",
                     isHot: false,
                     user: "/images/users/7.png",
+                    category: "art",
                 },
                 // 17
                 {
@@ -207,6 +223,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/24/2022",
                     isHot: false,
                     user: "/images/users/8.png",
+                    category: "videos",
                 },
                 // 18
                 {
@@ -219,6 +236,7 @@ const useProductStore = defineStore("productStore", {
                     dueDate: "09/21/2022",
                     isHot: false,
                     user: "/images/users/9.png",
+                    category: "videos",
                 },
             ],
         };
@@ -230,7 +248,7 @@ const useProductStore = defineStore("productStore", {
         singleProductData: (state) => {
             return (productSlug: string) => state.nfts.find((nft) => nft.slug === productSlug);
         },
-        anotherNFTs: (state) => [...state.nfts].slice(-3)
+        anotherNFTs: (state) => [...state.nfts].slice(-3),
     },
 });
 
