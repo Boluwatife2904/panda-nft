@@ -12,19 +12,19 @@
                     <h5 class="heading-5-bold footer__heading text-white">Resources</h5>
                     <ul>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Help Center</a>
+                            <a name="Help Center" href="#" class="navigation__link">Help Center</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Platform Status</a>
+                            <a name="Platform Status" href="#" class="navigation__link">Platform Status</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Partners</a>
+                            <a name="Partners" href="#" class="navigation__link">Partners</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Gas-Free Marketplace</a>
+                            <a name="Gas-Free Marketplace" href="#" class="navigation__link">Gas-Free Marketplace</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Blog</a>
+                            <a name="Blog" href="#" class="navigation__link">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -32,16 +32,16 @@
                     <h5 class="heading-5-bold footer__heading text-white">Company</h5>
                     <ul>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Our Team</a>
+                            <a name="Our Team" href="#" class="navigation__link">Our Team</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">About Us</a>
+                            <a name="About Us" href="#" class="navigation__link">About Us</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Contact Us</a>
+                            <a name="Contact Us" href="#" class="navigation__link">Contact Us</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Careers</a>
+                            <a name="Careers" href="#" class="navigation__link">Careers</a>
                         </li>
                     </ul>
                 </div>
@@ -50,13 +50,13 @@
                     <p class="footer__contact paragraph-regular-body">2715 Ash Dr. San Jose, South Dakota 83475</p>
                     <ul class="footer__socials grid">
                         <li>
-                            <a href="#"><IconsFacebook /></a>
+                            <a name="Facebook" href="#"><IconsFacebook /></a>
                         </li>
                         <li>
-                            <a href="#"><IconsTwitter /></a>
+                            <a name="Twitter" href="#"><IconsTwitter /></a>
                         </li>
                         <li>
-                            <a href="#"><IconsInstagram /></a>
+                            <a name="Instagram" href="#"><IconsInstagram /></a>
                         </li>
                     </ul>
                 </div>

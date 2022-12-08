@@ -9,6 +9,7 @@ export default defineNuxtConfig({
             meta: [
                 { name: "theme-color", content: "#02050e" },
                 { name: "viewport", content: "width=device-width, initial-scale=1" },
+                { name: "description", content: "The world's first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items." },
                 { name: "og:title", content: "Panda NFTs" },
                 { name: "og:site_name", content: "Panda NFTs" },
                 { name: "og:url", content: "https://pandanfts.vercel.app" },

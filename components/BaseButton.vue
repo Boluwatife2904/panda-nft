@@ -55,7 +55,7 @@ const radiusClasses = computed(() => {
 </script>
 
 <template>
-    <button :class="['button', variantClasses, weightClasses, paddingClasses, radiusClasses]">
+    <button name="button" :class="['button', variantClasses, weightClasses, paddingClasses, radiusClasses]">
         <slot></slot>
     </button>
 </template>
