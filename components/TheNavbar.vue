@@ -148,7 +148,7 @@ watch(useRoute(), () => {
         </span>
     </nav>
     <!-- Connect Wallet Modal -->
-    <base-modal :is-open="showConnectWalletModal" title="Connect your wallet" @close-modal="toggleConnectWalletModal">
+    <LazyBaseModal :is-open="showConnectWalletModal" title="Connect your wallet" @close-modal="toggleConnectWalletModal">
         <template #header>
             <div>
                 <p class="paragraph-regular-caption connect-wallet__subtitle">Select what network and wallet you want to connect below</p>
@@ -169,7 +169,7 @@ watch(useRoute(), () => {
             </div>
             <base-button variant="solid-blue" radius="small" padding="large">Connect Wallet</base-button>
         </template>
-    </base-modal>
+    </LazyBaseModal>
 </template>
 
 <style lang="scss">

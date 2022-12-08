@@ -23,7 +23,7 @@ const filterByCategory = (products: Product[]): Product[] => {
     return products;
 };
 
-const changeCategory = (category) => {
+const changeCategory = (category: string) => {
     selectedCategory.value = category;
 };
 

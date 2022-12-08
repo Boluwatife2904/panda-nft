@@ -1,8 +1,40 @@
 <script setup lang="ts">
 import useProductStore from "@/stores/ProductStore";
+const ProductStore = useProductStore();
+
 const searchTerm = ref("");
 
-const ProductStore = useProductStore();
+const selectedCategory = ref("all");
+const changeCategory = (category: string) => {
+    selectedCategory.value = category;
+};
+const categoryOptions = [
+    { key: "all", value: "All" },
+    { key: "music", value: "Music" },
+    { key: "art", value: "Art" },
+    { key: "sports", value: "Sports" },
+    { key: "virtual", value: "Virtual" },
+    { key: "videos", value: "Videos" },
+];
+
+const selectedSorting = ref<"name" | "dueDate" | "currentBid">("name");
+const sortOptions = [
+    { key: "name", value: "Name" },
+    { key: "currentBid", value: "Current Bid" },
+];
+
+const filteredProducts = computed(() => {
+    let products = ProductStore.filteredProducts(selectedCategory.value);
+    if (searchTerm.value) {
+        products = [...products].filter((product) => product.name.toLowerCase().includes(searchTerm.value.toLowerCase()));
+    }
+    if (selectedSorting.value) {
+        products = [...products].sort((a, b) => {
+            return a[selectedSorting.value] > b[selectedSorting.value] ? 1 : -1;
+        });
+    }
+    return products;
+});
 </script>
 
 <template>
@@ -19,20 +51,21 @@ const ProductStore = useProductStore();
             </div>
             <div class="discover__filter flex space-between items-center">
                 <span class="select">
-                    <BaseSelect id="sort__select" placeholder="Sort By" />
+                    <BaseSelect id="sort__select" v-model="selectedSorting" :options="sortOptions" />
                 </span>
                 <span class="select hide-on-desktop">
-                    <BaseSelect id="filter__select" placeholder="Filter By" />
+                    <BaseSelect id="filter__select" v-model="selectedCategory" :options="categoryOptions" placeholder="Filter By" />
                 </span>
                 <span class="hide-on-mobile">
-                    <NFTsFilter />
+                    <NFTsFilter :selected-category="selectedCategory" @change-category="changeCategory" />
                 </span>
             </div>
-            <div class="discover__products">
+            <div v-if="filteredProducts && filteredProducts.length > 0" class="discover__products">
                 <NFTList>
-                    <NFTListItem v-for="product in ProductStore.nfts" :key="product.image" :product="product" />
+                    <NFTListItem v-for="product in filteredProducts" :key="product.image" :product="product" />
                 </NFTList>
             </div>
+            <LazyEmptyList v-else />
         </div>
     </section>
 </template>

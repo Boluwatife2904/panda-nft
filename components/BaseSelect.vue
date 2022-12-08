@@ -1,16 +1,29 @@
 <script setup lang="ts">
+interface Option {
+    key: string;
+    value: string;
+}
+
 interface Props {
     id: string;
     placeholder?: string;
+    modelValue: string;
+    options: Option[];
+}
+
+interface Emits {
+    (e: "update:modelValue", value: string): void;
 }
 
 defineProps<Props>();
+defineEmits<Emits>();
 </script>
 
 <template>
     <div class="select">
-        <select :name="id" :id="id" class="select__field heading-6-medium text-white">
+        <select :name="id" :id="id" class="select__field heading-6-medium text-white" @change="$emit('update:modelValue', ($event.target as HTMLSelectElement).value)">
             <option v-if="!!placeholder" value="" selected>{{ placeholder }}</option>
+            <option v-for="option in options" :value="option.key" :selected="modelValue === option.value">{{ option.value }}</option>
         </select>
     </div>
 </template>
