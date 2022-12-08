@@ -23,7 +23,7 @@ const { countdown } = useCountdown(props.product.dueDate);
 <template>
     <section v-if="product" class="single-product__hero grid">
         <div class="single-product__image relative">
-            <nuxt-img format="webp" :src="product.image" :alt="`NFT image of ${product.name}`" />
+            <nuxt-img loading="lazy" format="webp" :src="product.image" :alt="`NFT image of ${product.name}`" />
             <span class="single-product__countdown flex items-center content-center absolute text-white">
                 <IconsFire />
                 {{ countdown }}

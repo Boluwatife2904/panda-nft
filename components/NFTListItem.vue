@@ -51,14 +51,14 @@ const viewProduct = (productSlug: string) => {
 <template>
     <div class="nft-card">
         <div class="nft-card__image">
-            <nuxt-img format="webp" :src="product.image" alt="" width="336" height="352" class="block mx-auto" />
+            <nuxt-img loading="lazy" format="webp" :src="product.image" alt="" width="336" height="352" class="block mx-auto" />
             <button ref="likeButton" class="nft-card__like flex items-center content-center" @click="toggleLikeIcon" aria-label="Like Button"><IconsHeart :fill="isLiked ? '#FF4D6D' : '#E7ECF2'" /></button>
         </div>
         <div class="nft-card__content flex space-between">
             <div class="nft-card__user">
                 <h6 class="heading-6-bold text-white nft-card__user-name">{{ product.name }}</h6>
                 <div class="flex items-center nft-card__user-details">
-                    <nuxt-img format="webp" :src="product.user" :alt="`${product.username} profile image`" class="nft-card__user-image" />
+                    <nuxt-img loading="lazy" format="webp" :src="product.user" :alt="`${product.username} profile image`" class="nft-card__user-image" />
                     <p class="paragraph-regular-caption text-white">{{ product.username }}</p>
                 </div>
             </div>

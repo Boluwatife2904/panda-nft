@@ -31,13 +31,13 @@ const heroImages = ref<HTMLElement>(null);
         </section>
         <section ref="heroImages" class="main-hero__images flex">
             <div class="main-hero__image">
-                <nuxt-img format="webp" height="352" width="498" src="/images/hero-section-image-one.png" class="block" alt="First Image in the hero section of the landing page" />
+                <nuxt-img loading="lazy" format="webp" height="352" width="498" src="/images/hero-section-image-one.png" class="block" alt="First Image in the hero section of the landing page" />
             </div>
             <div class="main-hero__image">
-                <nuxt-img format="webp" height="352" width="498" src="/images/hero-section-image-two.png" class="block" alt="Second Image in the hero section of the landing page" />
+                <nuxt-img loading="lazy" format="webp" height="352" width="498" src="/images/hero-section-image-two.png" class="block" alt="Second Image in the hero section of the landing page" />
             </div>
             <div class="main-hero__image">
-                <nuxt-img format="webp" height="352" width="398" src="/images/hero-section-image-three.png" class="block" alt="Third Image in the hero section of the landing page" />
+                <nuxt-img loading="lazy" format="webp" height="352" width="398" src="/images/hero-section-image-three.png" class="block" alt="Third Image in the hero section of the landing page" />
             </div>
         </section>
     </div>
