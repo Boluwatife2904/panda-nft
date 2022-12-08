@@ -40,9 +40,9 @@ watchEffect(() => {
         <div class="container">
             <ProductInformation :product="product" />
             <ProductTabChanger :selected-tab="selectedTab" @change-selected-tab="setSelectedTab" />
-            <ProductDescription v-if="selectedTab === 'description'" />
-            <ProductOffers v-if="selectedTab === 'offers'" />
-            <ProductPriceHistory v-if="selectedTab === 'price-history'" />
+            <LazyProductDescription v-if="selectedTab === 'description'" />
+            <LazyProductOffers v-if="selectedTab === 'offers'" />
+            <LazyProductPriceHistory v-if="selectedTab === 'price-history'" />
             <ProductAnotherNFTs :products="otherNFTs" />
         </div>
     </section>

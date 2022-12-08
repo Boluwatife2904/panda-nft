@@ -120,7 +120,7 @@ watch(useRoute(), () => {
         <div class="container flex">
             <div ref="navbarLogo" class="navbar__logo">
                 <nuxt-link :to="{ name: 'index' }">
-                    <nuxt-img format="webp" src="/images/pandanft-logo.png" width="140" height="40" alt="Panda NFT Logo" />
+                    <nuxt-img format="webp" fit="cover" src="/images/pandanft-logo.png" width="140" height="40" alt="Panda NFT Logo" />
                 </nuxt-link>
             </div>
             <ul ref="navbarLinkItems" class="navbar__links">
