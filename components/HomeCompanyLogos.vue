@@ -4,19 +4,19 @@
     <section class="logos-section relative">
         <div class="container flex items-center">
             <div class="logos-section__item">
-                <nuxt-img format="webp" src="/images/logos/binance.svg" fit="contain" width="139" height="34" alt="Binance Logo" />
+                <nuxt-img format="webp" src="/images/logos/binance.svg" fit="contain" width="150" height="35" alt="Binance Logo" />
             </div>
             <div class="logos-section__item">
-                <nuxt-img format="webp" src="/images/logos/trustwallet.svg" fit="contain" width="139" height="34" alt="TrustWallet Logo" />
+                <nuxt-img format="webp" src="/images/logos/trustwallet.svg" fit="contain" width="150" height="35" alt="TrustWallet Logo" />
             </div>
             <div class="logos-section__item">
-                <nuxt-img format="webp" src="/images/logos/metamask.svg" fit="contain" width="139" height="34" alt="Metamask Logo" />
+                <nuxt-img format="webp" src="/images/logos/metamask.svg" fit="contain" width="150" height="35" alt="Metamask Logo" />
             </div>
             <div class="logos-section__item">
-                <nuxt-img format="webp" src="/images/logos/coinbase.svg" fit="contain" width="139" height="34" alt="Coinbase Logo" />
+                <nuxt-img format="webp" src="/images/logos/coinbase.svg" fit="contain" width="150" height="35" alt="Coinbase Logo" />
             </div>
             <div class="logos-section__item">
-                <nuxt-img format="webp" src="/images/logos/tokocrypto.svg" fit="contain" width="139" height="38" alt="Tokocrypto Logo" />
+                <nuxt-img format="webp" src="/images/logos/tokocrypto.svg" fit="contain" width="150" height="35" alt="Tokocrypto Logo" />
             </div>
         </div>
         <div class="ornament ornament--logos"></div>
