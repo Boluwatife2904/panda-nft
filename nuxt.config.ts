@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     build: {
         transpile: ["gsap", "chart.js"],
     },
-    modules: ["@pinia/nuxt"],
+    modules: ["@pinia/nuxt", '@nuxt/image-edge',],
     css: ["~/assets/scss/main.scss", "~/assets/font.css"],
 });
 
