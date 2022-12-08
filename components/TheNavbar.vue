@@ -120,7 +120,7 @@ watch(useRoute(), () => {
         <div class="container flex">
             <div ref="navbarLogo" class="navbar__logo">
                 <nuxt-link :to="{ name: 'index' }">
-                    <img loading="lazy" src="~/assets/images/pandanft-logo.png" width="140" height="40" alt="Panda NFT Logo" />
+                    <nuxt-img format="webp" src="~/assets/images/pandanft-logo.png" width="140" height="40" alt="Panda NFT Logo" />
                 </nuxt-link>
             </div>
             <ul ref="navbarLinkItems" class="navbar__links">
@@ -131,7 +131,7 @@ watch(useRoute(), () => {
             <div ref="connectWalletButton" class="navbar__connect">
                 <BaseButton variant="outline-blue" max-width="100%" radius="small" padding="large" @click="toggleConnectWalletModal(true)">Connect Wallet</BaseButton>
             </div>
-            <button class="navbar__menu hide-on-desktop" @click="toggleNavbar">
+            <button class="navbar__menu hide-on-desktop" @click="toggleNavbar" aria-label="Toggle Navbar">
                 <span class="navbar__menu-bar block"></span>
                 <span class="navbar__menu-bar block"></span>
             </button>
