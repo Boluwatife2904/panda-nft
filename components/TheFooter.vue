@@ -50,13 +50,13 @@
                     <p class="footer__contact paragraph-regular-body">2715 Ash Dr. San Jose, South Dakota 83475</p>
                     <ul class="footer__socials grid">
                         <li>
-                            <a name="Facebook" href="#"><IconsFacebook /></a>
+                            <a name="Facebook" href="#" aria-label="Facebook"><IconsFacebook /></a>
                         </li>
                         <li>
-                            <a name="Twitter" href="#"><IconsTwitter /></a>
+                            <a name="Twitter" href="#" aria-label="Twitter"><IconsTwitter /></a>
                         </li>
                         <li>
-                            <a name="Instagram" href="#"><IconsInstagram /></a>
+                            <a name="Instagram" href="#" aria-label="Instagram"><IconsInstagram /></a>
                         </li>
                     </ul>
                 </div>

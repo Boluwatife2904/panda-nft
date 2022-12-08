@@ -52,7 +52,7 @@ const viewProduct = (productSlug: string) => {
     <div class="nft-card">
         <div class="nft-card__image">
             <nuxt-img format="webp" :src="product.image" alt="" width="336" height="352" class="block mx-auto" />
-            <button ref="likeButton" class="nft-card__like flex items-center content-center" @click="toggleLikeIcon"><IconsHeart :fill="isLiked ? '#FF4D6D' : '#E7ECF2'" /></button>
+            <button ref="likeButton" class="nft-card__like flex items-center content-center" @click="toggleLikeIcon" aria-label="Like Button"><IconsHeart :fill="isLiked ? '#FF4D6D' : '#E7ECF2'" /></button>
         </div>
         <div class="nft-card__content flex space-between">
             <div class="nft-card__user">
